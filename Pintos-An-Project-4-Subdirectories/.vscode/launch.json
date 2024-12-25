@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/an-trinh/Downloads/Pintos-KAIST-master_2/tests/filesys/extended",
-      "program": "/home/an-trinh/Downloads/Pintos-KAIST-master_2/tests/filesys/extended/build/Debug/outDebug",
+      "cwd": "/home/an-trinh/Downloads/pintos/pintos-anon-master/Pintos-An-Project-4-Subdirectories/filesys",
+      "program": "/home/an-trinh/Downloads/pintos/pintos-anon-master/Pintos-An-Project-4-Subdirectories/filesys/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
