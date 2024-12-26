@@ -21,6 +21,7 @@ Persistence of file system:
 1	grow-sparse-persistence
 1	grow-tell-persistence
 1	grow-two-files-persistence
+1	listing-persistence   
 1	syn-rw-persistence
 1	symlink-file-persistence
 1	symlink-dir-persistence
