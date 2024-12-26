@@ -6,3 +6,4 @@ filesys_SRC += filesys/directory.c	# Directories.
 filesys_SRC += filesys/inode.c		# File headers.
 filesys_SRC += filesys/fsutil.c		# Utilities.
 filesys_SRC += filesys/page_cache.c		# Page cache.
+filesys_SRC += filesys/listing.c    # Add new listing.c file

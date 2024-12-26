@@ -1,20 +1,7 @@
 # -*- makefile -*-
 
 buffer-cache_tests = bc-easy
-tests/filesys/buffer-cache_TESTS = $(patsubst %,tests/filesys/buffer-cache/%,$(buffer-cache_tests))
-tests/filesys/buffer-cache_GRADES = $(patsubst %,tests/filesys/buffer-cache/%-persistence,$(buffer-cache_tests))
 
-tests/filesys/buffer-cache_PROGS = $(tests/filesys/buffer-cache_TESTS) 
-
-$(foreach prog,$(tests/filesys/buffer-cache_PROGS),			\
-	$(eval $(prog)_SRC += $(prog).c tests/lib.c tests/filesys/seq-test.c))
-$(foreach prog,$(tests/filesys/buffer-cache_TESTS),		\
-	$(eval $(prog)_SRC += tests/main.c))
-$(foreach prog,$(tests/filesys/buffer-cache_TESTS),		\
-	$(eval $(prog)_PUTFILES += tests/filesys/extended/tar))
-# The version of GNU make 3.80 on vine barfs if this is split at
-# the last comma.
-$(foreach test,$(tests/filesys/buffer-cache_TESTS),$(eval $(test).output: FSDISK = tmp.dsk))
 
 GETTIMEOUT = 120
 

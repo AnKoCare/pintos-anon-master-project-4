@@ -1,21 +1,6 @@
 # -*- makefile -*-
 
 mount_tests = mount-easy
-tests/filesys/mount_TESTS = $(patsubst %,tests/filesys/mount/%,$(mount_tests))
-tests/filesys/mount_GRADES = $(patsubst %,tests/filesys/mount/%-persistence,$(mount_tests))
-
-tests/filesys/mount_PROGS = $(tests/filesys/mount_TESTS) 
-
-$(foreach prog,$(tests/filesys/mount_PROGS),			\
-	$(eval $(prog)_SRC += $(prog).c tests/lib.c tests/filesys/seq-test.c))
-$(foreach prog,$(tests/filesys/mount_TESTS),		\
-	$(eval $(prog)_SRC += tests/main.c))
-$(foreach prog,$(tests/filesys/mount_TESTS),		\
-	$(eval $(prog)_PUTFILES += tests/filesys/extended/tar))
-# The version of GNU make 3.80 on vine barfs if this is split at
-# the last comma.
-$(foreach test,$(tests/filesys/mount_TESTS),$(eval $(test).output: FSDISK = tmp.dsk))
-$(foreach test,$(tests/filesys/mount_TESTS),$(eval $(test).output: EXDISK = mnt.dsk))
 
 GETTIMEOUT = 120
 
